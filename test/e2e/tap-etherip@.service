@@ -1,0 +1,13 @@
+[Unit]
+Description=Dummy EtherIP Service for E2E Test
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+EnvironmentFile=/tmp/tap-etherip/%i
+ExecStart=ip netns exec tunnel1 /tmp/tap-etherip/sleep-infinity.sh %i $LOCAL $REMOTE
+SyslogIdentifier=tap-etherip
+
+[Install]
+WantedBy=multi-user.target

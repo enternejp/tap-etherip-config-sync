@@ -1,0 +1,24 @@
+{
+  "tunnels": [
+    {
+      "name": "64496-1",
+      "local_ip_addr": "2001:db8:ffff::1",
+      "remote_ip_addr": "2001:db8:6:4496::1"
+    },
+    {
+      "name": "64496-2",
+      "local_ip_addr": "2001:db8:ffff::1",
+      "remote_ip_addr": "2001:db8:6:4496::2"
+    },
+    {
+      "name": "64497-1",
+      "local_ip_addr": "2001:db8:ffff::1",
+      "remote_ip_addr": "2001:db8:6:4497::1"
+    },
+    {
+      "name": "64498-1",
+      "local_ip_addr": "2001:db8:ffff::2",
+      "remote_ip_addr": "2001:db8:6:4498::9876"
+    }
+  ]
+}
