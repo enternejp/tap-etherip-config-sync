@@ -1,0 +1,14 @@
+{
+  "tunnels": [
+    {
+      "name": "64496-1",
+      "local_ip_addr": "2001:db8:ffff::1",
+      "remote_ip_addr": "2001:db8:6:4496::1"
+    },
+    {
+      "name": "64496-2",
+      "local_fqdn": "ns1.enter.ne.jp",
+      "remote_fqdn": "www.cloudflare.com"
+    }
+  ]
+}

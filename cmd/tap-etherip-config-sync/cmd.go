@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/enternejp/tap-etherip-config-sync/cmd/tap-etherip-config-sync/resolve_dns"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -40,6 +41,8 @@ func main() {
 	viper.BindPFlags(rootCmd.Flags())
 	viper.AutomaticEnv()
 	viper.SetEnvKeyReplacer(strings.NewReplacer("-", "_", ".", "_"))
+
+	rootCmd.AddCommand(resolve_dns.Cmd())
 
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Printf("%+v\n", err)
