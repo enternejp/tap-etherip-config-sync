@@ -54,6 +54,7 @@ func resolveConfig(in *config.ConfWithDNS, l *zap.Logger) (*config.Conf, error) 
 			ips, err := dns.ResolveAAAA(ctx, inTunl.LocalFQDN)
 			if err != nil {
 				l.Warn("LocalFQDN resolve failed", zap.String("fqdn", inTunl.LocalFQDN), zap.Error(err))
+				continue
 			} else {
 				if len(ips) > 1 {
 					l.Warn("LocalFQDN multiple AAAA records. Use first IPv6 address.", zap.String("fqdn", inTunl.LocalFQDN), zap.Strings("dns_answers", ips))
@@ -74,6 +75,7 @@ func resolveConfig(in *config.ConfWithDNS, l *zap.Logger) (*config.Conf, error) 
 			ips, err := dns.ResolveAAAA(ctx, inTunl.RemoteFQDN)
 			if err != nil {
 				l.Warn("RemoteFQDN resolve failed", zap.String("fqdn", inTunl.RemoteFQDN), zap.Error(err))
+				continue
 			} else {
 				if len(ips) > 1 {
 					l.Warn("RemoteFQDN multiple AAAA records. Use first IPv6 address.", zap.String("fqdn", inTunl.RemoteFQDN), zap.Strings("dns_answers", ips))
