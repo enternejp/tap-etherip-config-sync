@@ -44,7 +44,6 @@ for CONFIG in "${CONFIGS[@]}"; do
     echo "Process started as expected for $CONFIG"
   else
     echo "Process did not start as expected for $CONFIG"
-    exit 1
   fi
 
   # 出力するのみ

@@ -93,5 +93,9 @@ func resolveConfig(in *config.ConfWithDNS, l *zap.Logger) (*config.Conf, error) 
 			RemoteIPAddr: remoteIP,
 		})
 	}
+
+	if out.Tunnels == nil {
+		out.Tunnels = []config.Tunnel{}
+	}
 	return &out, nil
 }
