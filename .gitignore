@@ -1,0 +1,4 @@
+/tap-etherip-config-sync
+/e2etest
+# Added by goreleaser init:
+dist/
